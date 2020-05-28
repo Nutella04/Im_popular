@@ -1,0 +1,206 @@
+@font-face{
+	src: url(shrift.otf);
+	font-family: my-font;
+}
+body{
+	font-family: my-font;
+	height: 100%;
+}
+html{
+	height: 100%;
+}
+.dance_club{
+	 width: 220px; position: absolute; top: 30%; left: 10%; color: yellow; 
+}
+.vocal_club{ 
+	width: 120px; position: absolute; top: 38%; left: 34%; color: #4287f5; 
+}
+.no_vocal_club{ 
+	width: 120px; position: absolute; top: 38%; left: 34%; color: #4287f5; 
+}
+.act_club{
+	 width: 180px; position: absolute; top: 40%; left: 63%; color: #7e11d1; 
+}
+.no_act_club{
+	 width: 180px; position: absolute; top: 40%; left: 63%; color: #7e11d1; 
+}
+.koridor{
+	width: 150px; position: absolute; top: 40%; left: 44%;  color: #f2138a; 
+}
+.no_koridor{
+	width: 150px; position: absolute; top: 40%; left: 44%;  color: #f2138a; 
+}
+
+.cafe{
+	height: 100px; width: 150px; background: red; display: none;
+}
+.main{
+	height: 600px;
+	display: none;
+}
+.bp_img{
+	height: 70px;
+	display: none;
+}
+.player1{
+	opacity: 0.8;
+	background: #4849c7;
+	height: 60px;
+	border: solid #050687;
+	border-bottom: none;
+	color: white;
+		
+}
+.player2{
+	opacity: 0.8;
+	background: #4849c7;
+	height: 120px;
+	border: solid #050687;
+	color: white;
+}
+.player{
+	height: 120px;
+	position: absolute;
+	bottom: 60px;
+	left: 0px;
+	display: none;
+}
+.girl1{
+	opacity: 0.8;
+	background: #9de3ad;
+	height: 60px;
+	border: solid #56ba6d;
+		
+}
+.girl2{
+	opacity: 0.8;
+	background: #9de3ad;
+	height: 120px;
+	border: solid #56ba6d;
+}
+.girl{
+	height: 120px;
+	position: absolute;
+	bottom: 60px;
+	left: 0px;
+	display: none;
+}
+.girl_img{
+	height: 430px;
+	position: absolute;
+	bottom: 60px;
+	right: 0px;
+}
+.pl_img{
+	height: 430px;
+	position: absolute;
+	bottom: 60px;
+	right: 0px;
+}
+
+.btnn{
+	position: absolute;
+	right: 10px;
+	top: 10px
+}
+.btn_start{
+	position: absolute;
+	top: 43%;
+	left: 45%;
+}
+.btn_name{
+	position: absolute;
+	top: 100%;
+	left: 44%
+}
+.start{
+	display: none;
+	position: absolute;
+	top: 30%;
+	left: 25%;
+}
+.inf{
+	border-radius: 100px;
+	position: absolute;
+	top: 30%;
+	left: 34%;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 30px;
+	text-align: center;
+	display: none;
+}
+.mark{
+	height: 70px;
+	width: 70px;
+	position: absolute;
+}
+.loc3_img {
+	height: 350px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.que {
+	margin-top: 10px;
+	width: 620px;
+	border-radius: 10px;
+	text-align: center;
+	padding-top: 5px;
+	text-transform: uppercase;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	background: #c184f0; border: solid #9e37ed;
+	margin-left: auto;
+	margin-right: auto;
+}	
+.loc3 {
+	width: 620px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	text-align: center;
+	display: none;
+}
+
+.micro{
+	height: 200px;
+	width: 290px;
+	position: absolute;
+	top: 37%;
+	left: 42%;
+}
+.hand{
+	width: 140px;
+	position: absolute;
+	top: 85%;
+	left: 43%;
+	transition: 1s;
+}
+.notebook{
+	height: 90px;
+	position: absolute;
+	display: none;
+	top: 0%;
+	left: 0%;
+	transition: 3s;
+}
+.loc4_btn{
+	width: 60px;
+	position: absolute;
+}
+.loc4_btn2{
+	width: 60px;
+	position: absolute;
+}
+.loc4_inf{
+	border-radius: 100px;
+	position: absolute;
+	top: 30%;
+	left: 34%;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 30px;
+	text-align: center;
+	display: none;
+	background: #f57dbd;
+	border: solid #f2138a;
+	color: white;
+}

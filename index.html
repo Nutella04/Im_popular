@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body style="background-image:url(img/start.jpg); background-size: cover">
+
+	<button class="btn_start btn btn-success rounded-pill pt-4"> <h1>START</h1></button>
+
+	<div class="start col-6 mx-auto text-center">
+		<h2>Для начала игры впишите свое имя и нажмите на кнопку</h2>
+		<textarea class="form-control-sm text_name mt-4"></textarea>
+		<button class="btn btn-primary btn_name">Готово</button>
+	</div>
+
+	<div class="col-12 player">
+		<div class="player1 col-3 pt-3 rounded-top">
+			<h3 class="pl_name"></h3>
+		</div>
+		<div class="player2 col-12 pt-3 rounded-right">
+			<h3 class="pl_slova"></h3>
+			<button class="btn btn-primary btnn1 btnn" style="background: #050687; border: #050687"> =></button>
+			<button class="btn btn-primary btnn11 btnn" style="display: none; background: #050687; border: #050687"> =></button>
+			<button class="btn btn-primary btnn12 btnn" style="display: none; background: #050687; border: #050687"> =></button>
+			<button class="btn btn-primary btnn13 btnn" style="display: none; background: #050687; border: #050687"> =></button>
+			<button class="btn btn-primary btnn14 btnn" style="display: none; background: #050687; border: #050687"> =></button>
+			<button class="btn btn-primary btnn_lose btnn" style="display: none; background: #050687; border: #050687"> =></button>
+			<button class="btn btn-primary btnn_win btnn" style="display: none; background: #050687; border: #050687"> =></button>
+		</div>	
+		<img src="img/kai.png" class="pl_img">
+	</div>
+
+	<div class="col-12 girl">
+		<div class="girl1 col-3 pt-3 rounded-top">
+			<h3 class="girl_name"></h3>
+		</div>
+		<div class="girl2 col-12 pt-3 rounded-right">
+			<h3 class="girl_slova"></h3>
+			<button class="btn btn-success btnn2 btnn"> =></button>
+			<button class="btn btn-warning btnn21 btnn" style="display: none;"> =></button>
+			<button class="btn btn-primary btnn22 btnn" style="display: none;"> =></button>
+			<button class="btn btn-primary btnn23 btnn" style="display: none; background: #9e37ed; border: #9e37ed"> =></button>
+			<button class="btn btn-danger btnn24 btnn" style="display: none;"> =></button>
+		</div>
+		<img src="img/shuhua.png" class="girl_img">
+	</div>
+
+	<div class="main col-12">	
+		<img src="img/lisa.jpg" class="rounded-circle bp_img">
+		<img src="img/rose.jpg" class="rounded-circle bp_img">
+		<img src="img/jennie.jpg" class="rounded-circle bp_img">
+		<img src="img/jisoo.jpg" class="rounded-circle bp_img">
+
+		<div class="dance_club text-center pt-1"><h3>Танцевальный клуб</h3></div>
+		<div class="vocal_club text-center pt-1" style="display: none;"><h2>Пение</h2></div>
+		<div class="no_vocal_club text-center pt-1"><h1>?</h1></div>
+		<div class="act_club text-center pt-1" style="display: none;"><h3>Актерское мастерство</h3></div>
+		<div class="no_act_club text-center pt-1"><h1>?</h1></div>
+		<div class="koridor text-center pt-1" style="display: none;"><h2>Коридор</h2></div>
+		<div class="no_koridor text-center pt-1"><h1>?</h1></div>
+	</div>
+
+	<div class="inf col-4 mx-auto">
+		<h3 class="text_zadacha"></h3>
+		<h4 class="text_poyasn"></h4>
+		<h4>Вперед</h4>
+		<button class="btn btn-warning mx-auto col-4 ok" style="display: none;">ok</button>
+		<button class="btn btn-warning mx-auto col-4 ok" style="display: none;">ok</button>
+		<button class="btn  btn-primary mx-auto col-4 ok" style="display: none;">ok</button>
+		<button class="btn btn-warning mx-auto col-4 ok" style="display: none;">=></button>
+	</div>
+
+	<div class="loc1" style="display: none;">
+		<h3 style="color: #002469">Количество шагов: <span class="count text-success">0</span></h3>
+		<h3 style="color: #002469">Количество выполненных шагов: <span class="shag text-primary">0</span></h3>
+	</div>
+
+
+	<div class="loc2 pt-2" style="display: none;">
+		<h4 class="ml-2 text-white">Время: <span class="loc2_timeTxt"></span></h4>
+		<h4 class="ml-2 text-white">Счёт: <span class="loc2_scoreTxt"></span></h4>
+
+		<img src="loc2/micro.png" class="micro">
+	</div>
+
+
+	<div class="loc3">
+		<h2 class="answer"></h2>
+		<img src="" class="loc3_img">
+
+		<div class="que yes1" style="display: none;"> 
+			
+		</div>
+		<div class="que no"> 
+			
+		</div>
+		<div class="que yes2" style="display: none;"> 
+
+		</div>
+		<div class="que noo"> 
+			
+		</div>
+		<div class="que yes3" style="display: none;"> 
+			
+		</div>
+	</div>
+
+
+	<div class="loc4" style="display: none;">
+		<h3 style="color: #a30282">Количество тетрадей: <span class=" nado text-success">0</span></h3>
+		<h3 style="color: #a30282">Количество пойманных тетрадей: <span class="poimano text-primary">0</span></h3>
+
+		<img src="loc4/notebook.png" class="notebook" style="display: block;">
+		<img src="loc4/notebook.png" class="notebook">
+		<img src="loc4/notebook.png" class="notebook">
+		<img src="loc4/notebook.png" class="notebook">
+		<img src="loc4/notebook.png" class="notebook">
+		<img src="loc4/notebook.png" class="notebook">
+		<img src="loc4/notebook.png" class="notebook">
+		<img src="loc4/notebook.png" class="notebook">
+		<img src="loc4/notebook.png" class="notebook">
+		<img src="loc4/notebook.png" class="notebook">	
+
+		<img src="loc4/hand.png" class="hand">
+
+		<img src="loc4/right.png" class="loc4_btn" style="bottom: 10%; right: 2%;">
+		<img src="loc4/left.png" class="loc4_btn" style="bottom: 10%; right: 6%;">
+
+		<img src="loc4/right2.png" class="loc4_btn2" style="bottom: 5%; right: 0%;">
+		<img src="loc4/left2.png" class="loc4_btn2" style="bottom: 5%; right: 7%;">
+	</div>
+	<div class="loc4_inf mx-auto col-4">
+		<h4>Чтобы управлять рукой нажимай на стрелочки, красные делают шаги меньше, а синие больше</h4>
+		<button class="btn btn-primary mx-auto col-4 ok" style="background:#f2138a; border: #f2138a;">ok</button>
+	</div>
+
+
+	<div class="loc5">
+		
+	</div>
+
+	<script type="text/javascript">
+		let popitki = 0;
+		let Lisa = 0;
+		let Jennie = 0;
+		let Jisoo = 0;
+		let Rose = 0;
+		let bp = document.querySelectorAll(".bp_img");
+		let btn_lose = document.querySelector(".btnn_lose");
+		let btn_win = document.querySelector(".btnn_win");
+		let pl_img = document.querySelector(".pl_img");
+
+		let body = document.querySelector("body");
+		let player = document.querySelector(".player");
+		let girl = document.querySelector(".girl");
+		let text_name = document.querySelector(".text_name")
+		let name = " ";
+
+		document.querySelector(".btn_start").onclick = function(){
+			document.querySelector(".btn_start").style.display = "none";
+			body.style.background = "#4287f5";
+			document.querySelector(".start").style.display = "block";
+		}
+		
+		document.querySelector(".btn_name").onclick = function(){
+			document.querySelector(".start").style.display = "none";
+			body.style.backgroundImage = "url(img/bg1.jpg)";
+			body.style.backgroundSize = "100% 100%";
+			name = text_name.value;
+			player.style.display = "block";
+
+			document.querySelector(".pl_name").innerHTML = name;			
+		}
+
+		let pl_name = document.querySelector(".pl_name");
+		let girl_name = document.querySelector(".girl_name");
+		let btn_pl = document.querySelector(".btnn1");
+		let btn_girl = document.querySelector(".btnn2");
+
+		let pl_slova = document.querySelector(".pl_slova");
+		let girl_slova = document.querySelector(".girl_slova");
+		let fraza = 0;
+
+		// Первый диалог
+		let m1 = ['Какая красивая школа! Аж дух захватывает', 'Я обязательно стану самым популярным учеником в школе!!', 'Авахвавха, прости, просто тебя на всю улицу слышно', 'Тебе не стать самым популярным, у школы уже есть королевы', 'Вот они, и если тебе действительно хочется стать главным, то придется заполучить их признание', 'Ого, они действительно очень красивые', 'Я получу их признание!!', 'Спасибо тебе, незнакомка, теперь я знаю что делать, для своей цели', 'Хмм, куда бы пойти?'];
+
+
+		pl_slova.innerHTML = m1[fraza];
+		btn_pl.onclick = function(){
+			fraza = fraza + 1;
+			pl_slova.innerHTML = m1[fraza];
+			if (fraza == 2) {
+				player.style.display = "none";
+				girl.style.display = "block";
+				girl1.style.borderBottom = "none";
+				girl_name.innerHTML = 'Незнакомка';
+				girl_slova.innerHTML = m1[fraza];
+			}
+			if (fraza == 8) {
+				body.style.backgroundImage = "url(img/bg3.jpg)";
+				body.style.backgroundSize = "100% 100%";
+				pl_slova.innerHTML = m1[8];
+				btn_pl.style.display = "none";
+				let nachalo = function(){
+					player.style.display = "none";
+					main.style.display = "block";
+				}
+				setTimeout(nachalo, 2000);
+			}
+		}
+		btn_girl.onclick = function(){
+			fraza = fraza + 1;
+			girl_slova.innerHTML = m1[fraza];
+			if (fraza == 4) {
+				body.style.backgroundImage = "url(img/bg2.jpg)";
+				body.style.backgroundSize = "100% 100%";
+			}
+			if (fraza == 5) {
+				pl_slova.innerHTML = m1[fraza];
+				player.style.display = "block";
+				girl.style.display = "none";
+				btn_girl.style.display = "none";
+				fraza = fraza + 1;					
+			}
+		}
+
+
+		let dance_club = document.querySelector(".dance_club");
+		let vocal_club = document.querySelector(".vocal_club");
+		let act_club = document.querySelector(".act_club");
+		let koridor = document.querySelector(".koridor");
+		let cafe = document.querySelector(".cafe");
+		let main = document.querySelector(".main");
+		let zadachi = ['Задача: безупречно станцевать перед Лисой', 'Задача: отлично спеть перед Розэ','Задача: пройти тест Джису на отлично', 'Неожиданное задание: Дженни упала, поймай ее тетради'];
+		let poyasn = ['Надо успеть нажать на как можно большее количество шариков', 'Успей за 10 секунд сделать 35 кликов на микрофоне, чтобы взять высокую ноту', 'Просто постарайся и ответь на ВСЕ вопросы правильно', 'Слови как минимум 8 тетрадей из 10'];
+		let lose_text = ['Я облажался, не стоило приходить в школу', 'Теперь все надо мной смеются', 'А все потому, что мне захотелось стать популярным', 'Хочу домой..'];
+		let win_text = ['Какой замечательный день', 'Я наконец самый популярный ученик в школе', 'Все мною восхощаются','Что может быть лучше?', 'А, знаю', 'Свидание с Дженни, пойду приглашу ее в кафешку'];
+		let text_zadacha = document.querySelector(".text_zadacha");
+		let text_poyasn = document.querySelector(".text_poyasn");
+		let ok = document.querySelectorAll(".ok");
+		let girl1 = document.querySelector(".girl1");
+		let girl2 = document.querySelector(".girl2");
+		let girl_img = document.querySelector(".girl_img");
+
+
+
+		let btn_pl1 = document.querySelector(".btnn11");
+		let btn_girl1 = document.querySelector(".btnn21");		
+		let m2 = ['Простите за вторжение!', 'А, да ничего, я все равно уже заканчиваю', 'Погоди, а это не ты случаем на весь двор закричал, что станешь тут самым популярным?', 'Запомни, этой школы уже есть главные - я и мои подруги', 'И если ты не понравишься хотя бы одной из нашей четверки', 'То ты не никогда не достичь этого', 'Знаю, поэтому я пришел за твоим признанием', 'Интересно, не ожидала такого', 'Ладно, тогда станцуй мне что нибудь, только тогда я тебя признаю']
+		let inf = document.querySelector(".inf");
+
+		let loc1 = document.querySelector(".loc1");
+
+		dance_club.onclick = function(){
+			btn_pl1.style.display = 'block';
+			body.style.backgroundImage = "url(loc1/bg.jpg)";
+			main.style.display = "none";
+			fraza = 0;
+			player.style.display = "block";		
+			pl_slova.innerHTML = m2[fraza];
+			btn_pl1.onclick = function(){								
+				fraza = fraza + 1;
+				
+				if (fraza == 1) {
+					player.style.display = "none";
+					girl.style.display = "block";
+					btn_girl1.style.display = "block";
+					girl_name.innerHTML = "Лиса";
+					girl_img.src = 'loc1/lisa.png';
+					girl1.style.border = "solid #f2b841";
+					girl2.style.border = "solid #f2b841";
+					girl1.style.borderBottom = "none";
+					girl1.style.background = "#ffe45c";
+					girl2.style.background = "#ffe45c";
+					girl_slova.innerHTML = m2[fraza];
+				}
+				if (fraza == 8) {
+					player.style.display = "none";
+					girl.style.display = "block";
+					girl_slova.innerHTML = m2[fraza-1];
+					btn_pl1.style.display = "none";
+				}
+				pl_slova.innerHTML = m2[fraza];
+			}
+			btn_girl1.onclick = function(){
+				girl_slova.innerHTML = m2[fraza];
+				fraza = fraza + 1;
+				if (fraza == 7) {
+					pl_slova.innerHTML = m2[fraza-1];
+					player.style.display = "block";
+					girl.style.display = "none";
+				}		
+				if (fraza == 10) {
+					girl.style.display = "none";
+					text_zadacha.innerHTML = zadachi[0];
+					text_poyasn.innerHTML = poyasn[0];
+					inf.style.display = "block";
+					inf.style.background = "#f6e14b";
+					inf.style.border = "solid yellow";
+					ok[0].style.display = "block";
+				}
+			}
+		}
+							
+
+
+		ok[0].onclick = function(){
+			inf.style.display = "none";
+			ok[0].style.display = "none";
+			loc1.style.display = "block";
+
+			let Randomleft = function(){
+				let rand = Math.random() * 1250;
+				let randRound = Math.round(rand);
+				return randRound; 
+			}
+
+			let Randomtop = function(){
+				let randa = Math.random() * 500;
+				let randRounda = Math.round(randa);
+				return randRounda; 
+			}
+			
+			let createPoint = function(){
+				let point = document.createElement('div');
+				document.body.appendChild(point);
+				point.classList.add('mark', 'rounded-circle');
+				countnum = countnum + 1;
+				counttext.innerHTML = countnum;
+
+				point.onclick = function(){
+					point.style.display = 'none';
+					shagnum = shagnum + 1;
+					shagtext[0].innerHTML = shagnum;
+				}
+
+				point.style.left = Randomleft() + 'px';
+				point.style.top = Randomtop() + 85 + 'px';
+			}
+			
+			stop = setInterval(createPoint, 1000);
+
+			let counttext = document.querySelector('.count');
+			let shagtext = document.querySelectorAll('.shag');
+			countnum = 0;
+			shagnum = 0;
+			counttext.innerHTML = countnum;
+			shagtext[0].innerHTML = shagnum;
+
+			let finish = function(){
+				clearInterval(stop);
+				if (shagnum >= 10) {
+					loc1.style.display = 'none';
+					girl.style.display = 'block';
+					girl_slova.innerHTML = 'А ты все же не так плох, ладно, теперь ты мне нравишься'
+					btn_girl1.onclick = function(){
+						girl.style.display = 'none';
+						main.style.display = 'block';
+						dance_club.style.display = 'none';
+						popitki = popitki + 1;
+						Lisa = 1;
+						btn_girl1.style.display = "none";
+						body.style.backgroundImage = "url(img/bg3.jpg)";
+						body.style.backgroundSize = "100% 100%";
+						bp[0].style.display = "block";
+						document.querySelector(".no_vocal_club").style.display = "none";
+						vocal_club.style.display = "block";
+					}
+				}
+				else {
+					loc1.style.display = 'none';
+					girl.style.display = 'block';
+					girl_slova.innerHTML = 'Пффф, попробуй в следующий раз';
+					btn_girl1.onclick = function(){
+						girl.style.display = 'none';
+						main.style.display = 'block';
+						popitki = popitki + 1;
+						btn_girl1.style.display = "none";
+						body.style.backgroundImage = "url(img/bg3.jpg)";
+						body.style.backgroundSize = "100% 100%";
+						if (popitki == 6) {
+							main.style.display = 'none';
+							body.style.backgroundImage = "url(img/bg4.jpg)";
+
+							let lose = function(){
+								body.style.backgroundImage = "url(img/bg3.jpg)";
+								player.style.display = "block";
+								btn_lose.style.display = "block";
+								pl_img.src = "img/kai_lose.png";
+								fraza = 0;
+								pl_slova.innerHTML = lose_text[fraza];
+								btn_lose.onclick = function(){
+									fraza = fraza + 1;
+									pl_slova.innerHTML = lose_text[fraza];
+									if (fraza == 4) {
+										player.style.display = "none";
+										body.style.backgroundImage = "url(img/lose.jpg)";
+									}
+								} 
+							}
+							setTimeout(lose,2000);
+						}
+					}
+				}
+			}
+
+			setTimeout(finish, 10900);
+		}
+
+		let m3 = ['Привет, я не помешал?', 'Привет, нет, не помешал', 'Хмм, погоди, это о тебе мне Лиса рассказала?', 'Я не люблю угрожать, поэтому просто спрошу', 'Зачем ты пришел?', 'Получить твое одобрение', 'Я сделаю что угодно!', 'Правда?', 'Мне нравятся парни, которые умеют петь', 'Так что, спой мне']
+		let btn_pl2 = document.querySelector(".btnn12");
+		let btn_girl2 = document.querySelector(".btnn22");
+		let loc2 = document.querySelector(".loc2");
+		let loc2_timeTxt = document.querySelector(".loc2_timeTxt");
+		let loc2_scoreTxt = document.querySelector(".loc2_scoreTxt");
+		let micro = document.querySelector(".micro");
+		vocal_club.onclick = function(){
+			main.style.display = "none";
+			body.style.backgroundImage = "url(loc2/bg.jpeg)";
+			btn_pl2.style.display = 'block';
+			fraza = 0;
+			player.style.display = "block"		
+			pl_slova.innerHTML = m3[fraza];
+			btn_pl2.onclick = function(){
+				fraza = fraza + 1;
+				player.style.display = "none";
+				girl.style.display = "block";
+				btn_girl2.style.display = 'block';
+				girl_name.innerHTML = 'Розэ';
+				girl_img.src = 'loc2/rose.png';
+				girl1.style.border = "solid #4287f5";
+				girl2.style.border = "solid #4287f5";
+				girl1.style.background = "#77aafc";
+				girl2.style.background = "#77aafc";
+				girl1.style.borderBottom = "none";
+				girl_slova.innerHTML = m3[fraza];
+				if (fraza == 8) {								
+					player.style.display = "none";
+					girl.style.display = "block";
+					girl_slova.innerHTML = m3[fraza];
+					fraza = fraza + 1;
+				}
+			}
+
+			btn_girl2.onclick = function(){
+				fraza = fraza + 1;
+				girl_slova.innerHTML = m3[fraza];
+				if (fraza == 5) {						
+					player.style.display = "block";
+					girl.style.display = "none";
+					pl_slova.innerHTML = m3[fraza];
+					fraza = fraza + 1;		
+				}			
+				if (fraza == 10) {
+					girl.style.display = "none";
+					text_zadacha.innerHTML = zadachi[1];
+					text_poyasn.innerHTML = poyasn[1];
+					inf.style.display = "block";
+					inf.style.background = "#77aafc";
+					inf.style.border = "solid #4287f5";
+					ok[1].style.display = "block";
+					ok[1].style.background = "#4287f5";
+					ok[1].style.border = "solid #4287f5";
+				}
+			}
+								
+		}
+
+
+		ok[1].onclick = function(){
+			ok[1].style.display = "none";
+			inf.style.display = "none";
+			loc2.style.display = "block";
+			let loc2_timeNum = 10;
+			loc2_timeTxt.innerHTML = loc2_timeNum;
+			let loc2_scoreNum = 0;
+			loc2_scoreTxt.innerHTML = loc2_scoreNum;
+
+			let Timer1 = function(){
+				loc2_timeNum = loc2_timeNum - 1;
+				loc2_timeTxt.innerHTML = loc2_timeNum;
+				if (loc2_timeNum <= 0 && loc2_scoreNum < 20) {
+					clearInterval(stop1);
+					loc2.style.display ="none";
+					girl.style.display = "block";
+					girl_slova.innerHTML = "Ты конечно хорошо поешь, но не дотягиваешь для моего признания";
+					btn_girl2.onclick = function(){
+						girl.style.display = "none";
+						btn_girl2.style.display = "none";
+						main.style.display = 'block';
+						popitki = popitki + 1;
+						body.style.backgroundImage = "url(img/bg3.jpg)";
+						body.style.backgroundSize = "100% 100%";
+						if (popitki == 6) {
+							main.style.display = 'none';
+							body.style.backgroundImage = "url(img/bg4.jpg)";
+
+							let lose = function(){
+								body.style.backgroundImage = "url(img/bg3.jpg)";
+								player.style.display = "block";
+								btn_lose.style.display = "block";
+								pl_img.src = "img/kai_lose.png";
+								fraza = 0;
+								pl_slova.innerHTML = lose_text[fraza];
+								btn_lose.onclick = function(){
+									fraza = fraza + 1;
+									pl_slova.innerHTML = lose_text[fraza];
+									if (fraza == 4) {
+										player.style.display = "none";
+										body.style.backgroundImage = "url(img/lose.jpg)";
+									}
+								} 
+							}
+							setTimeout(lose,2000);
+						}
+					}
+				}	
+			}
+			let stop1 = setInterval(Timer1, 1000);
+			micro.onclick = function(){
+				loc2_scoreNum = loc2_scoreNum + 1;
+				loc2_scoreTxt.innerHTML = loc2_scoreNum;
+				if (loc2_scoreNum >= 35 && loc2_timeNum > 0) {
+					clearInterval(stop1);
+					loc2.style.display ="none";
+					Rose = 1;
+					girl.style.display = "block";
+					girl_slova.innerHTML = "Вау ты можешь брать такие высокие ноты, ты мне теперь нравишься";
+					btn_girl2.onclick = function(){
+						girl.style.display = "none";
+						btn_girl2.style.display = "none";
+						main.style.display = 'block';
+						popitki = popitki + 1;
+						body.style.backgroundImage = "url(img/bg3.jpg)";
+						body.style.backgroundSize = "100% 100%";
+						vocal_club.style.display = "none";
+						bp[1].style.display = "block";
+						document.querySelector(".no_act_club").style.display = "none";
+						act_club.style.display = "block";
+					}
+
+				}					
+			}
+		}
+
+
+		let btn_pl3 = document.querySelector(".btnn13");
+		let btn_girl3 = document.querySelector(".btnn23");
+		let m4 = ['Хээй, тут есть эмм.. Ким Джису?', 'Меня кто-то ищет?', 'О, я тебя знаю, все только о тебе и твоих планах говорят', 'Наверное, ты пришел сюда, чтобы мне угодить, я пойду к тебе на встречу', 'Знаешь, я люблю смотреть фильмы, а особенные культовые', 'Так что я стану уважать тебя, если ты сможешь ответить правильно на все вопросы'];
+
+		let voprosi = ['От какой платформы отправлялся поезд в Хогвардс?', 'Как же все-таки зовут того, кого нельзя называть?', 'Как зовут главного героя Титаника?', 'С чем столкнулся титаник?', 'Кем работал хозяин Хатико?', 'Какой породы Хатико?', 'Как зовут вампира-любовный интерес в Сумерках?','Откуда Белла родом?', 'Как зовут главного героя Пиратов Карибского моря?', 'Какой корбаль искал главный герой Пиратов Карибского моря?'];
+		let text_no = ['10 4/5', 'Волан-де-Март', 'Джон', 'С акулами', 'Учёный', 'Дог', 'Эдуард', 'Лас Вегас, Невада', 'Капитан Джон Воробей', 'Черная Лагуна'];
+		let text_noo = ['9 3/5', 'Волен-де-Морт', 'Жак', 'С метеоритом', 'Полицейский', 'Шпиц', 'Эдгер','Санта-Фе, Нью Мехико', 'Капитан Джек Соловей', 'Черный Воробей'];
+		let text_yes = ['9 3/4', 'Волан-де-Морт', 'Джек', 'С айсбергом', 'Профессор', 'Акита-ину', 'Эдвард','Феникс, Аризона', 'Капитан Джек Воробей', 'Черная Жемчужина'];
+
+		let answer = document.querySelector(".answer");
+		let no = document.querySelector(".no");
+		let noo = document.querySelector(".noo");
+		let score = 0;
+		let ochered = 0;
+		let gde = 0;
+		let yes3 = document.querySelector(".yes3");
+		let yes2 = document.querySelector(".yes2");
+		let yes1 = document.querySelector(".yes1");
+		let loc3_img = document.querySelector(".loc3_img");
+		let loc3 = document.querySelector(".loc3");
+
+		act_club.onclick = function(){
+			main.style.display = "none";
+			body.style.backgroundImage = "url(loc3/bg.jpg)";
+			btn_pl3.style.display = 'block';
+			fraza = 0;
+			player.style.display = "block";		
+			pl_slova.innerHTML = m4[fraza];
+			btn_pl3.onclick = function(){
+				fraza = fraza + 1;
+				player.style.display = "none";
+				girl.style.display = "block";
+				btn_girl3.style.display = 'block';
+				girl_name.innerHTML = 'Джису';
+				girl_img.src = 'loc3/jisoo.png';
+				girl1.style.border = "solid #9e37ed";
+				girl2.style.border = "solid #9e37ed";
+				girl1.style.borderBottom = "none";
+				girl1.style.background = "#c184f0";
+				girl2.style.background = "#c184f0";
+				girl_slova.innerHTML = m4[fraza];
+			}
+
+			btn_girl3.onclick = function(){
+				fraza = fraza + 1;
+				girl_slova.innerHTML = m4[fraza];
+				if (fraza == 6) {
+					girl.style.display = "none";
+					text_zadacha.innerHTML = zadachi[2];
+					text_poyasn.innerHTML = poyasn[2];
+					inf.style.display = "block";
+					inf.style.background = "#c184f0";
+					inf.style.border = "solid #9e37ed";
+					inf.style.color = "white";
+					ok[2].style.display = "block";
+					ok[2].style.background = "#9e37ed";
+					ok[2].style.border = "#9e37ed";
+				}
+				
+			}
+		}
+
+		ok[2].onclick = function(){
+			ok[2].style.display = "none";
+			inf.style.display = "none";
+			loc3.style.display = "block";
+
+			no.innerHTML = text_no[0];
+			noo.innerHTML = text_noo[0];
+			answer.innerHTML = voprosi[0];
+			loc3_img.src = "loc3/" + ochered + ".jpg";
+
+			let RandYes = function(){
+				let rando = Math.random() * 2;
+				let randRoundo = Math.round(rando);
+				randRoundo = randRoundo + 1;
+				return randRoundo; 
+			}
+
+			gde = RandYes();
+
+			if (gde == 1) {
+				yes1.style.display = 'block';
+				yes1.innerHTML = text_yes[ochered];
+			}
+			if (gde == 2) {
+				yes2.style.display = 'block';
+				yes2.innerHTML = text_yes[ochered];
+			}
+			if (gde == 3) {
+				yes3.style.display = 'block';
+				yes3.innerHTML = text_yes[ochered];
+			}
+
+			let Funct = function(){
+				loc3_img.src = "loc3/" + ochered + ".jpg";
+				no.innerHTML = text_no[ochered];
+				noo.innerHTML = text_noo[ochered];
+				answer.innerHTML = voprosi[ochered];
+				yes1.style.display = 'none';
+				yes2.style.display = 'none';
+				yes3.style.display = 'none';
+
+				gde = RandYes();
+				if (gde == 1) {
+					yes1.style.display = 'block';
+					yes1.innerHTML = text_yes[ochered];
+				}
+				if (gde == 2) {
+					yes2.style.display = 'block';
+					yes2.innerHTML = text_yes[ochered];
+				}
+				if (gde == 3) {
+					yes3.style.display = 'block';
+					yes3.innerHTML = text_yes[ochered];
+				}
+			}
+
+			let loc3_win = function(){
+				loc3.style.display = 'none';
+				girl.style.display = 'block';
+				girl_slova.innerHTML = 'Ты все таки оправдал мои ожидания, молодец, ладно, встретимся позже';
+				btn_girl3.onclick = function(){
+					girl.style.display = 'none';
+					main.style.display = 'block';
+					act_club.style.display = 'none';
+					popitki = popitki + 1;
+					Jisoo = 1;
+					btn_girl3.style.display = "none";
+					body.style.backgroundImage = "url(img/bg3.jpg)";
+					body.style.backgroundSize = "100% 100%";
+					bp[3].style.display = "block";
+					document.querySelector(".no_koridor").style.display = "none";
+					koridor.style.display = "block";
+				}
+			}
+
+			let loc3_lose = function(){
+				loc3.style.display = 'none';
+				girl.style.display = 'block';
+				girl_slova.innerHTML = 'Ты меня разочаровал';
+				btn_girl3.onclick = function(){
+					girl.style.display = 'none';
+					main.style.display = 'block';
+					popitki = popitki + 1;
+					btn_girl3.style.display = "none";
+					body.style.backgroundImage = "url(img/bg3.jpg)";
+					body.style.backgroundSize = "100% 100%";
+					if (popitki == 6) {
+						main.style.display = 'none';
+						body.style.backgroundImage = "url(img/bg4.jpg)";
+
+						let lose = function(){
+							body.style.backgroundImage = "url(img/bg3.jpg)";
+							player.style.display = "block";
+							btn_lose.style.display = "block";
+							pl_img.src = "img/kai_lose.png";
+							fraza = 0;
+							pl_slova.innerHTML = lose_text[fraza];
+							btn_lose.onclick = function(){
+								fraza = fraza + 1;
+								pl_slova.innerHTML = lose_text[fraza];
+								if (fraza == 4) {
+									player.style.display = "none";
+									body.style.backgroundImage = "url(img/lose.jpg)";
+								}
+							} 
+						}
+						setTimeout(lose,2000);
+					}
+				}
+			}
+
+			no.onclick = function(){
+				ochered = ochered + 1;
+				Funct();
+				if (ochered == 10 && score < 10) {
+					loc3_lose();
+				}
+			}
+			noo.onclick = function(){
+				ochered = ochered + 1;
+				Funct();
+				if (ochered == 10 && score < 10) {
+					loc3_lose();
+				}
+			}
+			yes1.onclick = function(){
+				score = score + 1;
+				ochered = ochered + 1;
+				Funct();
+				if (ochered == 10 && score == 10) {
+					loc3_win();
+				}
+				if (ochered == 10 && score < 10) {
+					loc3_lose();
+				}
+			}
+			yes2.onclick = function(){
+				score = score + 1;
+				ochered = ochered + 1;
+				Funct();
+				if (ochered == 10 && score == 10) {
+					loc3_win();
+				}
+				if (ochered == 10 && score < 10) {
+					loc3_lose();
+				}
+			}
+			yes3.onclick = function(){
+				score = score + 1;
+				ochered = ochered + 1;
+				Funct();
+				if (ochered == 10 && score == 10) {
+					loc3_win();
+				}
+				if (ochered == 10 && score < 10) {
+					loc3_lose();
+				}			
+			}
+
+			
+
+			
+		}
+
+		let btn_pl4 = document.querySelector(".btnn14");
+		let btn_girl4 = document.querySelector(".btnn24");
+		let m5 = ['Тааак, где же Дженни?', 'Ай', 'Тетради!'];
+		let loc4 = document.querySelector(".loc4");
+		koridor.onclick = function(){
+			main.style.display = "none";
+			btn_pl4.style.display = 'block';
+			fraza = 0;
+			player.style.display = "block";		
+			pl_slova.innerHTML = m5[fraza];
+			btn_pl4.onclick = function(){
+				fraza = fraza + 1;
+				player.style.display = "none";
+				girl.style.display = "block";
+				btn_girl4.style.display = 'block';
+				girl_name.innerHTML = 'Дженни';
+				girl_img.src = 'loc4/jennie1.png';
+				girl1.style.border = "solid #f2138a";
+				girl2.style.border = "solid #f2138a";
+				girl1.style.borderBottom = "none";
+				girl1.style.background = "#f57dbd";
+				girl2.style.background = "#f57dbd";
+				girl_slova.innerHTML = m5[fraza];
+			}
+			btn_girl4.onclick = function(){
+				fraza = fraza + 1;
+				girl_slova.innerHTML = m5[fraza];
+				if (fraza == 3) {
+					girl.style.display = "none";
+					text_zadacha.innerHTML = zadachi[3];
+					text_poyasn.innerHTML = poyasn[3];
+					inf.style.display = "block";
+					inf.style.background = "#f57dbd";
+					inf.style.border = "solid #f2138a";
+					inf.style.color = "white";
+					ok[3].style.display = "block";
+					ok[3].style.background = "#f2138a";
+					ok[3].style.border = "#f2138a";
+					ok[3].style.color = "white";
+				}
+			}
+		}
+		let loc4_inf = document.querySelector(".loc4_inf");
+		ok[3].onclick = function(){
+			ok[3].style.display = "none";
+			inf.style.display = "none";
+			loc4_inf.style.display = "block";
+		}
+		let notebook = document.querySelectorAll(".notebook");
+		let hand = document.querySelector(".hand");
+		let hand_left = 43;
+		let uslovie1 = 104;
+		let uslovie2 = 111;
+		let uslovie3 = 0;
+		let uslovie4 = 0;		
+		let loc4_score = 0;
+		let loc4_btn = document.querySelectorAll(".loc4_btn");
+		let loc4_btn2 = document.querySelectorAll(".loc4_btn2");
+		let tope = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+		let leftt = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+		let j = 1;
+		let nado_txt = document.querySelector(".nado");
+		let nado_num = 1;
+		let poimano_txt = document.querySelector(".poimano");
+
+		ok[4].onclick = function(){
+			loc4_inf.style.display = "none";
+			loc4.style.display = "block";
+
+			loc4_btn[0].onclick = function(){
+				hand_left = hand_left + 10;
+				uslovie3 = hand_left - 8;
+				uslovie4 = hand_left + 10;
+				hand.style.left = hand_left + "%";
+			}
+			loc4_btn[1].onclick = function(){
+				hand_left = hand_left - 10;
+				uslovie3 = hand_left - 8;
+				uslovie4 = hand_left + 10;
+				hand.style.left = hand_left + "%";
+			}
+			loc4_btn2[0].onclick = function(){
+				hand_left = hand_left + 30;
+				uslovie3 = hand_left - 8;
+				uslovie4 = hand_left + 10;
+				hand.style.left = hand_left + "%";
+			}
+			loc4_btn2[1].onclick = function(){
+				hand_left = hand_left - 30;
+				uslovie3 = hand_left - 8;
+				uslovie4 = hand_left + 10;
+				hand.style.left = hand_left + "%";
+			}
+
+			let random = function(){
+				let rand = Math.random()*60;
+				let num = Math.round(rand);
+				return num;
+			}
+
+
+			//Рандомайзер дает значение нахождения по оси x
+			for (let i = 0; i < leftt.length; i++) {
+				leftt[i] = 80 - random();
+				notebook[i].style.left = leftt[i] + "%";			
+			}
+			// Первое яблоко падает
+			let down0 = function(){
+				tope[0] = tope[0] + 8;
+				notebook[0].style.top = tope[0] + "%";
+
+				if (tope[0] >= 112) {
+					notebook[0].style.display = 'none';
+				}
+				if (tope[0] <= uslovie2 && tope[0] >= uslovie1 && leftt[0] <= uslovie4 && leftt[0] >= uslovie3) {
+					notebook[0].style.display = 'none';
+					loc4_score = loc4_score + 1;
+					poimano_txt.innerHTML = loc4_score;
+					console.log(loc4_score);
+				}
+
+				
+			}			
+			setInterval(down0, 600);
+			nado_txt.innerHTML = nado_num;
+
+					
+			// Появление остальных яблок
+			let poyav = function(j){
+				notebook[j].style.display = "block";
+				nado_num = nado_num + 1;
+				nado_txt.innerHTML = nado_num;
+
+				tope[j] = 0;
+				notebook[j].style.top = tope[j] + "%";
+
+				//Типа яблоки падают
+				let down = function(){			
+					tope[j] = tope[j] + 8;
+					notebook[j].style.top = tope[j] + "%";
+					if (tope[j] >= 112) {
+						notebook[j].style.display = "none";
+					}
+					if (tope[j] <= uslovie2 && tope[j] >= uslovie1 && leftt[j] <= uslovie4 && leftt[j] >= uslovie3) {
+						notebook[j].style.display = 'none';
+						loc4_score = loc4_score + 1;
+						poimano_txt.innerHTML = loc4_score;
+						console.log(loc4_score);
+					}
+				}		
+				setInterval(down, 600);
+			}
+
+			let n = 1
+			let give = function(){
+				poyav(n);
+				n = n + 1;
+			}
+			let stop2 = setInterval(give, 3000);
+
+			let loc4_fin = function(){
+				clearInterval(stop2);
+				if (loc4_score >= 8) {
+					loc4.style.display = "none";
+					girl.style.display = "block";
+					girl_img.src = "loc4/jennie2.png";
+					girl_slova.innerHTML = "Большое спасибо, а ты хороший парень";
+					btn_girl4.onclick = function(){
+						girl.style.display = 'none';
+						koridor.style.display = 'none';
+						popitki = popitki + 1;
+						Jennie = 1;
+						btn_girl4.style.display = "none";
+						bp[2].style.display = "block";
+						main.style.display = 'none';
+
+						body.style.backgroundImage = "url(img/bg5.jpg)";
+						let win = function(){
+							body.style.backgroundImage = "url(img/bg3.jpg)";
+							player.style.display = "block";
+							btn_lose.style.display = "block";
+							pl_img.src = "img/kai_win.png";
+							fraza = 0;
+							pl_slova.innerHTML = win_text[fraza];
+							btn_lose.onclick = function(){
+								fraza = fraza + 1;
+								pl_slova.innerHTML = win_text[fraza];
+								if (fraza == 6) {
+									player.style.display = "none";
+									body.style.backgroundImage = "url(img/win.jpg)";
+								}
+							} 
+						}
+						setTimeout(win,2000);
+					}
+
+				}
+				else{
+					loc4.style.display = "none";
+					girl.style.display = "block";
+					girl_img.src = "loc4/jennie3.png";
+					girl_slova.innerHTML = "Отойди, не мешай тетради подобрать";
+					btn_girl4.onclick = function(){
+						girl.style.display = 'none';
+						main.style.display = 'block';
+						popitki = popitki + 1;
+						btn_girl4.style.display = "none";
+						if (popitki == 6) {
+							main.style.display = 'none';
+							body.style.backgroundImage = "url(img/bg4.jpg)";
+
+							let lose = function(){
+								body.style.backgroundImage = "url(img/bg3.jpg)";
+								player.style.display = "block";
+								btn_lose.style.display = "block";
+								pl_img.src = "img/kai_lose.png";
+								fraza = 0;
+								pl_slova.innerHTML = lose_text[fraza];
+								btn_lose.onclick = function(){
+									fraza = fraza + 1;
+									pl_slova.innerHTML = lose_text[fraza];
+									if (fraza == 4) {
+										player.style.display = "none";
+										body.style.backgroundImage = "url(img/lose.jpg)";
+									}
+								} 
+							}
+							setTimeout(lose,2000);
+						}
+					}
+				}
+			}	
+			setTimeout(loc4_fin, 35000);
+		}
+
+
+
+		
+		
+	</script>
+</body>
+</html>
